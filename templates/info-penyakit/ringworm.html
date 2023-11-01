@@ -1,0 +1,101 @@
+{% extends 'informasi.html' %}
+
+{% block contentInformasi %}
+<article class="info-penyakit-cont">
+    <img src="{{ url_for('static', filename='card/ringworm.png') }}" class="image" />
+    <div class="content">
+            <h2 class="mt-0">
+                {% if prediction_page %}
+                    <span class="h3">
+                        Hasil Prediksi:
+                    </span>
+                {% endif %}
+    
+                Ringworm
+            </h2>
+            {% if prediction_page %}
+                <div>
+                    <!-- <p>CF Combine: {{ combined_cf }}</p>
+                    <p>Bobot: {{ weight }}</p> -->
+                </div>
+                <hr>
+            {% endif %}
+
+        <p class="paragraph">
+            Dermatofitosis atau yang lebih sering dikenal dengan ringworm adalah penyakit kulit yang disebabkan oleh kapang dermatofita dan termasuk dalam genus dermatofita, diantaranya yaitu Microsporum, Trychophyton, dan Epidermophyton. Kapang dermatofita menginfeksi kulit bagian superfisial 
+        </p>
+
+        <h3 class="title">
+            Ciri - Ciri :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Kerontokan rambut: Kucing yang terinfeksi ringworm mengalami kerontokan rambut pada area yang terinfeksi, yang biasanya mulai dari wajah, telinga, atau kaki.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Lesi kulit: Kucing yang terinfeksi ringworm biasanya memiliki lesi kulit yang bersisik, kemerahan, dan terkadang berbentuk cincin. Lesi ini dapat terasa gatal dan menyebabkan rasa tidak nyaman pada kucing.                
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Sistem kekebalan tubuh yang lemah: Kucing yang memiliki sistem kekebalan tubuh yang lemah, seperti kucing muda atau kucing yang sedang sakit, lebih rentan terhadap infeksi ringworm.
+                </p>
+            </li>
+        </ul>     
+        
+        <h3 class="title">
+            Penanganan :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Kebersihan yang baik: Pastikan kucing Anda selalu dalam keadaan bersih. Rajinlah membersihkan dan menyikat bulu kucing secara teratur untuk menghilangkan kotoran dan potensi jamur dari kulitnya.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Hindari kontak dengan hewan yang terinfeksi: Ringworm dapat menyebar melalui kontak langsung dengan hewan yang terinfeksi. Hindarilah kontak kucing Anda dengan hewan lain yang memiliki gejala ringworm atau sudah terdiagnosis.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Pemisahan kucing yang terinfeksi: Jika Anda memiliki lebih dari satu kucing, pisahkan kucing yang terinfeksi ringworm dari kucing-kucing lainnya selama proses penyembuhan. Hal ini akan membantu mencegah penyebaran penyakit ke kucing lain.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Sterilisasi lingkungan: Bersihkan dan sterilkan semua perlengkapan kucing, seperti tempat tidur, mainan, litter box, dan peralatan makan. Gunakan disinfektan yang efektif untuk membunuh spora jamur yang mungkin ada di lingkungan.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Hindari berbagi peralatan: Pastikan kucing Anda memiliki perlengkapan pribadi, seperti mangkuk makan, tempat tidur, dan sikat. Hindari berbagi peralatan ini dengan kucing lain untuk mencegah penyebaran infeksi.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Perhatikan gejala: Amati kucing Anda dengan cermat dan perhatikan gejala ringworm, seperti adanya daerah kulit yang botak, bersisik, berkerak, atau gatal. Jika Anda melihat tanda-tanda ini, segera bawa kucing Anda ke dokter hewan untuk mendapatkan diagnosis dan pengobatan yang tepat.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Vaksinasi: Meskipun vaksinasi tidak sepenuhnya mencegah ringworm, vaksinasi yang tepat dapat membantu meningkatkan sistem kekebalan tubuh kucing dan meminimalkan risiko infeksi atau mempercepat proses penyembuhan.
+                </p>
+            </li>
+        </ul>
+    </div>
+</article>
+{% endblock %}

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+/* Desain untuk body */
+body {
+  font-family: Nunito, Arial, sans-serif;
+  margin: 0;
+  /* padding: 20px; */
+}
+
+/* Desain untuk judul */
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* Desain untuk form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Desain untuk tombol submit */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Desain untuk hasil prediksi */
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.form-group.row {
+  width: 100%;
+}
+
+main {
+  /* margin-bottom: 48px; */
+}
+
+
+/* Navbar */
+nav a {
+  color: white;
+}
+
+nav .navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Main */
+main > section > .container {
+  max-width: 1200px;
+  width: 92%;
+}
+
+main h1 {
+  margin: 48px;
+  font-size: 48px;
+}
+
+
+/* form */
+form label {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Article Disease */
+article.info-penyakit-cont {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 48px;
+}
+
+article.info-penyakit-cont .image {
+  width: 250px;
+  height: 224px;
+  object-fit: cover;
+  /* max-width: 250px; */
+}
+
+article.info-penyakit-cont .paragraph {
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+article.info-penyakit-cont .content {
+  padding: 20px;
+}
+
+article.info-penyakit-cont .title {
+  color: #222;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+article.info-penyakit-cont h2.title {
+  font-size: 36px;
+}
+
+.card-disease .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-disease .card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.jumbotron {
+    /* padding: 6rem 2rem; */
+    height: calc(100vh - 56px);
+    margin-bottom: 0;
+}
+
+
+.qna-cont {
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.qna-cont .qna-image {
+  flex: none;
+  width: 100%;
+  max-width: 200px;
+}
+.qna-cont .qna-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.qna-cont .qna-text {
+  flex: 1;
+}

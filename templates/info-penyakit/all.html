@@ -1,0 +1,66 @@
+{% extends 'informasi.html' %}
+
+{% block contentInformasi %}
+    <div class="row row-cols-4">
+        <div class="col">
+            <div class="card-disease card mb-5" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='card/scabies.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Scabies</h5>
+                <p class="card-text">Scabies adalah penyakit yang menyerang bagian kulit yang disebabkan oleh parasit, yaitu tungau Sarcoptes scabiei.
+                </p>
+                <a href="/informasi/scabies" class="btn btn-primary">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card-disease card mb-5" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='card/ringworm.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Ringworm</h5>
+                <p class="card-text">Dermatofitosis atau yang lebih sering dikenal dengan ringworm adalah penyakit kulit yang disebabkan oleh kapang dermatofita.
+                </p>
+                <a href="/informasi/ringworm" class="btn btn-primary">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card-disease card mb-5" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='card/flearingan.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Flea</h5>
+                <p class="card-text">Flea adalah infeksi parasitik yang disebabkan oleh kutu yang hidup di kulit kucing dan mengisap darah. Kutu pada kucing dapat menyebabkan kucing merasa sangat gatal dan tidak nyaman, serta dapat menyebabkan infeksi dan anemia pada kucing yang parah.
+                </p>
+                <a href="/informasi/flea" class="btn btn-primary">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card-disease card mb-5" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='card/pediculosis.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pediculosis</h5>
+                    <p class="card-text">Pediculosis pada kucing adalah infeksi parasitik yang disebabkan oleh serangga parasit yang disebut kutu kepala.        
+                    </p>
+                    <a href="/informasi/pediculosis" class="btn btn-primary">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col">
+            <div class="card-disease card mb-5" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='card/studtail.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Stud Tail</h5>
+                <p class="card-text">Stud tail atau kelenjar ekor hiperaktif adalah kondisi di mana kelenjar sebasea pada bagian atas ekor kucing mengalami peningkatan aktivitas sehingga menghasilkan jumlah minyak yang berlebihan.
+                </p>
+                <a href="/informasi/stud-tail" class="btn btn-primary">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

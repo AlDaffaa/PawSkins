@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 class="mb-5">Sistem Diagnosis Penyakit Kulit Kucing</h1>
+
+        <form method="POST" action="{{ url_for('predict') }}">
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-1.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="kulit_menggumpal">1. Apakah Kulit Kucing Anda Menggumpal?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_menggumpal_ya" name="kulit_menggumpal" value="1" required>
+                        <label class="form-check-label" for="kulit_menggumpal_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_menggumpal_tidak" name="kulit_menggumpal" value="0">
+                        <label class="form-check-label" for="kulit_menggumpal_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-2.webp') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="kulit_memerah">2. Apakah Kulit Kucing Anda  Memerah?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_memerah_ya" name="kulit_memerah" value="1" required>
+                        <label class="form-check-label" for="kulit_memerah_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_memerah_tidak" name="kulit_memerah" value="0">
+                        <label class="form-check-label" for="kulit_memerah_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-3.webp') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="luka_melingkar">3. Apakah terdapat Luka Melingkar?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="luka_melingkar_ya" name="luka_melingkar" value="1" required>
+                        <label class="form-check-label" for="luka_melingkar_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="luka_melingkar_tidak" name="luka_melingkar" value="0">
+                        <label class="form-check-label" for="luka_melingkar_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-4.png') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="kulit_berkerak">4. Apakah Kulit Kucing Anda Berkerak?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_berkerak_ya" name="kulit_berkerak" value="1" required>
+                        <label class="form-check-label" for="kulit_berkerak_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kulit_berkerak_tidak" name="kulit_berkerak" value="0">
+                        <label class="form-check-label" for="kulit_berkerak_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-5.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="bintik_pasir_hitam">5. Apakah terdapat Bintik seperti Pasir berwarna Hitam?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bintik_pasir_hitam_ya" name="bintik_pasir_hitam" value="1" required>
+                        <label class="form-check-label" for="bintik_pasir_hitam_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bintik_pasir_hitam_tidak" name="bintik_pasir_hitam" value="0">
+                        <label class="form-check-label" for="bintik_pasir_hitam_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-6.png') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="bintik_pasir_abu">6. Apakah terdapat Bintik seperti Pasir berwarna Abu?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bintik_pasir_abu_ya" name="bintik_pasir_abu" value="1" required>
+                        <label class="form-check-label" for="bintik_pasir_abu_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bintik_pasir_abu_tidak" name="bintik_pasir_abu" value="0">
+                        <label class="form-check-label" for="bintik_pasir_abu_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-7.png') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="kutu">7. Apakah terdapat Kutu pada kucing Anda?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kutu_ya" name="kutu" value="1" required>
+                        <label class="form-check-label" for="kutu_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kutu_tidak" name="kutu" value="0">
+                        <label class="form-check-label" for="kutu_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-8.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="bulu_rontok">8. Apakah Bulu Kucing Anda Rontok?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bulu_rontok_ya" name="bulu_rontok" value="1" required>
+                        <label class="form-check-label" for="bulu_rontok_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bulu_rontok_tidak" name="bulu_rontok" value="0">
+                        <label class="form-check-label" for="bulu_rontok_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-9.webp') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="telinga_berkerak">9. Apakah Telinga Kucing Anda Berkerak?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="telinga_berkerak_ya" name="telinga_berkerak" value="1" required>
+                        <label class="form-check-label" for="telinga_berkerak_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="telinga_berkerak_tidak" name="telinga_berkerak" value="0">
+                        <label class="form-check-label" for="telinga_berkerak_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-10.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="kebotakan">10. Apakah Kucing Anda mengalami Kebotakan?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kebotakan_ya" name="kebotakan" value="1" required>
+                        <label class="form-check-label" for="kebotakan_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="kebotakan_tidak" name="kebotakan" value="0">
+                        <label class="form-check-label" for="kebotakan_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-11.png') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="ekor_berminyak">11. Apakah Ekor Kucing Anda Berminyak?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="ekor_berminyak_ya" name="ekor_berminyak" value="1" required>
+                        <label class="form-check-label" for="ekor_berminyak_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="ekor_berminyak_tidak" name="ekor_berminyak" value="0">
+                        <label class="form-check-label" for="ekor_berminyak_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-12.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="bercak_pd_ekor">12. Apakah terdapat Bercak Pada Ekor Kucing Anda?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bercak_pd_ekor_ya" name="bercak_pd_ekor" value="1" required>
+                        <label class="form-check-label" for="bercak_pd_ekor_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="bercak_pd_ekor_tidak" name="bercak_pd_ekor" value="0">
+                        <label class="form-check-label" for="bercak_pd_ekor_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-13.png') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="menggaruk">13. Apakah kucing Anda sering Menggaruk bagian tubuhnya?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="menggaruk_ya" name="menggaruk" value="1" required>
+                        <label class="form-check-label" for="menggaruk_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="menggaruk_tidak" name="menggaruk" value="0">
+                        <label class="form-check-label" for="menggaruk_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex qna-cont">
+                <div class="qna-image">
+                    <img src="{{ url_for('static', filename='img/gejala-14.jpg') }}" alt="kulit menggumpal">
+                </div>
+                <div class="qna-text form-group">
+                    <label for="aroma">14. Apakah Kucing Anda mengeluarkan Aroma tak sedap?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="aroma_ya" name="aroma" value="1" required>
+                        <label class="form-check-label" for="aroma_ya">Ya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="aroma_tidak" name="aroma" value="0">
+                        <label class="form-check-label" for="aroma_tidak">Tidak</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tambahkan checkbox lainnya sesuai kebutuhan -->
+            <button type="submit" class="btn btn-primary, mb-3">Prediksi</button>
+        </form>
+
+        <!-- Menampilkan hasil prediksi -->
+        {% if prediction %}
+        <h2>Hasil Prediksi:</h2>
+        <p>Penyakit Kulit: {{ prediction }}</p>
+        <!-- <p>Bobot: {{ weight }}</p> -->
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

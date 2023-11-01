@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="jumbotron">
+
+    <!-- Kode Home -->
+    <div class="row">
+        <div class="img-cont mt-5 col-md-7">
+            <img src="{{ url_for('static', filename='home.png') }}" class="card-img-top" alt="...">
+        </div>
+
+        <div class="text-cont col-md-5 align-self-center">
+            <h1 class="text-left m-0 mb-3">Sistem Diagnosis Penyakit Kulit Kucing</h1>
+            <p>Selamat datang di PawSkins - Solusi Pintar untuk Kesehatan Kulit Kucing Anda! Dibuat khusus untuk pemilik kucing yang peduli dengan kesehatan dan kenyamanan hewan peliharaan mereka. </p>
+            <a href="/diagnosis" class="btn btn-primary " >Diagnosis</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

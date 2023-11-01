@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %} {% endblock %} - Sistem Diagnosis Penyakit Kulit Kucing</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="/">PawSkins</a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active" href="/">Home</a>
+                          <a class="nav-link" href="/diagnosis">Diagnosis</a>
+                          <a class="nav-link" href="/informasi">Informasi dan Pencegahan</a>
+                          <!-- <a class="nav-link" href="/pencegahan">Pencegahan</a> -->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="content">
+            {% block content %} {% endblock %}
+        </main>
+    </body>
+</html>

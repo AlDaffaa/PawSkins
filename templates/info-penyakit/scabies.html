@@ -1,0 +1,100 @@
+{% extends 'informasi.html' %}
+
+{% block contentInformasi %}
+<article class="info-penyakit-cont">
+    <img src="{{ url_for('static', filename='card/scabies.png') }}" class="image" />
+    <div class="content">
+        <h2 class="mt-0">
+            {% if prediction_page %}
+                <span class="h3">
+                    Hasil Prediksi:
+                </span>
+            {% endif %}
+
+            Scabies
+        </h2>
+        {% if prediction_page %}
+            <div>
+                <!-- <p>CF Combine: {{ combined_cf }}</p>
+                <p>Bobot: {{ weight }}</p> -->
+            </div>
+            <hr>
+        {% endif %}
+        <p class="paragraph">
+            Scabies adalah penyakit yang menyerang bagian kulit yang disebabkan oleh parasit, yaitu tungau Sarcoptes scabiei
+        </p>
+
+        <h3 class="title">
+            Ciri - Ciri :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Hewan tampak gatal selalu berusaha menggaruk dan menggosok-gosokkan tubuh ke benda keras di sekitarnya sehingga terjadi peradangan 
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Bagian yang terinfeksi lebih awal adalah daun telinga, daerah kepala, sekitar mata, dada, kaki, dan ekor.        
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Kucing yang terinfeksi terlihat kulit menjadi kering, menebal, dan mengkerut, serta terbentuknya krusta atau keropeng.   
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Hewan yang tidak diobati menjadi lemah, lesu, kurus, dan diikuti dengan kematian.   
+                </p>
+            </li>
+        </ul>  
+
+        <h3 class="title">
+            Penanganan :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Kebersihan yang baik: Pastikan kucing Anda selalu dalam kondisi bersih. Rajinlah membersihkan dan menyikat bulu kucing secara teratur untuk menghilangkan kotoran dan potensi parasit dari kulitnya.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Karantina: Jika Anda memiliki lebih dari satu kucing, isolasikan kucing yang terinfeksi scabies dari kucing-kucing lainnya selama proses penyembuhan. Ini akan membantu mencegah penyebaran penyakit ke kucing lain.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Obat antiparasit: Konsultasikan dengan dokter hewan mengenai pilihan obat antiparasit yang sesuai untuk mencegah dan mengobati scabies pada kucing. Terdapat berbagai produk yang tersedia, seperti tetes atau tablet antiparasit yang diberikan secara rutin untuk mencegah infeksi scabies.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Lingkungan yang bersih: Selain menjaga kebersihan kucing, penting juga untuk membersihkan lingkungan sekitar kucing. Bersihkan tempat tidur, karpet, dan semua area di mana kucing sering berada dengan vakum atau membersihkannya secara teratur untuk menghilangkan parasit.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Hindari kontak dengan hewan yang terinfeksi: Jika Anda mengetahui ada kucing lain yang terinfeksi scabies, hindarilah kontak langsung dengan kucing tersebut untuk menghindari penularan penyakit ke kucing Anda.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Perhatikan gejala: Amati kucing Anda secara cermat dan perhatikan gejala scabies, seperti gatal, kulit merah, lecet, atau kerontokan bulu yang tidak normal. Jika Anda melihat tanda-tanda ini, segera bawa kucing Anda ke dokter hewan untuk mendapatkan diagnosis dan pengobatan yang tepat.
+                </p>
+            </li>
+        </ul>
+    </div>
+</article>
+{% endblock %}

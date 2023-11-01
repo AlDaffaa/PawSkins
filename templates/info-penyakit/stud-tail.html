@@ -1,0 +1,90 @@
+{% extends 'informasi.html' %}
+
+{% block contentInformasi %}
+<article class="info-penyakit-cont">
+    <img src="{{ url_for('static', filename='card/studtail.png') }}" class="image" />
+    <div class="content">
+        <h2 class="mt-0">
+            {% if prediction_page %}
+                <span class="h3">
+                    Hasil Prediksi:
+                </span>
+            {% endif %}
+
+            Stud Tail
+        </h2>
+        {% if prediction_page %}
+            <div>
+                <!-- <p>CF Combine: {{ combined_cf }}</p>
+                <p>Bobot: {{ weight }}</p> -->
+            </div>
+            <hr>
+        {% endif %}
+        <p class="paragraph">
+            Stud tail atau kelenjar ekor hiperaktif adalah kondisi di mana kelenjar sebasea pada bagian atas ekor kucing mengalami peningkatan aktivitas sehingga menghasilkan jumlah minyak yang berlebihan.        
+        </p>
+
+        <h3 class="title">
+            Ciri - Ciri :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Kerak berminyak pada bagian atas ekor.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Rambut yang rontok pada area ekor.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Bau tidak sedap pada area ekor. 
+                </p>
+            </li>
+        </ul> 
+
+        <h3 class="title">
+            Penanganan :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Perawatan kebersihan: Jaga kebersihan kucing Anda dengan rutin membersihkan dan menyikat bulu mereka. Membersihkan daerah pangkal ekor secara teratur dapat membantu mengontrol produksi minyak yang berlebihan dan mencegah penumpukan kotoran atau sisa-sisa yang dapat menyebabkan stud tail.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Pembersihan yang tepat: Saat membersihkan area pangkal ekor kucing, pastikan Anda menggunakan produk pembersih yang lembut dan tidak mengiritasi kulit kucing. Hindari penggunaan produk pembersih yang keras atau mengandung bahan kimia yang dapat mengiritasi kulit atau mengganggu keseimbangan minyak alami.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Perhatikan makanan dan nutrisi: Pastikan kucing Anda mendapatkan makanan yang seimbang dan berkualitas tinggi. Nutrisi yang baik dapat membantu menjaga kesehatan kulit dan mengurangi risiko produksi minyak berlebihan. Diskusikan dengan dokter hewan mengenai diet yang tepat untuk kucing Anda.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Sterilisasi: Stud tail lebih umum terjadi pada kucing jantan yang belum disterilisasi. Mempertimbangkan sterilisasi pada kucing jantan dapat membantu mengurangi risiko stud tail.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Konsultasikan dengan dokter hewan: Jika kucing Anda memiliki masalah dengan stud tail, segera konsultasikan dengan dokter hewan untuk diagnosis dan pengobatan yang tepat. Dokter hewan akan memberikan nasihat yang sesuai dan mungkin merekomendasikan penggunaan sampo khusus atau perawatan medis lainnya untuk mengatasi masalah ini.
+                </p>
+            </li>
+        </ul>
+
+ 
+    </div>
+</article>
+{% endblock %}

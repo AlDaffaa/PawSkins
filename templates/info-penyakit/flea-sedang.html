@@ -1,0 +1,106 @@
+{% extends 'informasi.html' %}
+
+{% block contentInformasi %}
+<article class="info-penyakit-cont">
+    <img src="{{ url_for('static', filename='card/fleasedang.png') }}" class="image" />
+    <div class="content">
+        <h2 class="mt-0">
+            {% if prediction_page %}
+                <span class="h3">
+                    Hasil Prediksi:
+                </span>
+            {% endif %}
+
+            Flea Sedang
+        </h2>
+        {% if prediction_page %}
+            <div>
+                <!-- <p>CF Combine: {{ combined_cf }}</p>
+                <p>Bobot: {{ weight }}</p> -->
+            </div>
+            <hr>
+        {% endif %}
+
+        <p class="paragraph">
+            Flea adalah infeksi parasitik yang disebabkan oleh kutu yang hidup di kulit kucing dan mengisap darah. Kutu pada kucing dapat menyebabkan kucing merasa sangat gatal dan tidak nyaman, serta dapat menyebabkan infeksi dan anemia pada kucing yang parah.        
+        </p>
+
+        <h3 class="title">
+            Ciri - Ciri :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Kucing yang menderita Flea mengalami rambut kusam.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Terdapat bintik seperti pasir berwarna hitam pada bulu
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Terdapat kulit merah dan teriritasi, gatal, dan kerontokan rambut pada kucing.  
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Kutu juga dapat ditemukan di seluruh tubuh kucing, terutama di area leher, perut, dan pangkal ekor    
+                </p>
+            </li>
+        </ul> 
+        
+        <h3 class="title">
+            Penanganan :
+        </h3>
+
+        <ul>
+            <li>
+                <p class="paragraph">
+                    Pengobatan antiparasit rutin: Konsultasikan dengan dokter hewan mengenai produk antiparasit yang tepat untuk kucing Anda, seperti tetes atau tablet antiparasit yang dapat diberikan secara rutin. Pengobatan ini akan membantu mencegah infestasi kutu pada kucing dan mengontrol populasi kutu di sekitar mereka.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Pembersihan lingkungan: Bersihkan rumah Anda secara teratur, termasuk tempat tidur kucing, karpet, dan furnitur yang sering dikunjungi oleh kucing. Vakum dan cuci dengan air panas untuk membunuh kutu dan telurnya yang mungkin ada di lingkungan.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Cegah akses kutu: Hindari kucing Anda berinteraksi dengan hewan yang terinfeksi kutu. Jika kucing Anda sering berinteraksi dengan hewan lain, seperti di luar rumah atau di tempat penitipan hewan, pertimbangkan untuk menggunakan produk pencegahan kutu yang lebih intensif.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Periksa secara teratur: Periksa bulu dan kulit kucing secara teratur untuk mencari tanda-tanda adanya kutu atau gigitannya. Jika Anda melihat tanda-tanda infestasi kutu, segera lakukan tindakan pengobatan yang sesuai.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Mandi rutin: Mandikan kucing Anda secara teratur dengan sampo khusus yang mengandung insektisida untuk kutu. Ini dapat membantu menghilangkan kutu yang ada pada tubuh kucing dan mencegah infestasi yang lebih lanjut.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Jaga kebersihan kucing: Rajin menyisir bulu kucing dengan sikat yang cocok untuk menghilangkan kutu yang mungkin terperangkap di bulu mereka. Jaga kebersihan lingkungan kucing dengan membuang bulu yang rontok dan membersihkan litter box secara teratur.
+                </p>
+            </li>
+
+            <li>
+                <p class="paragraph">
+                    Konsultasikan dengan dokter hewan: Selalu berkonsultasi dengan dokter hewan mengenai langkah-langkah pencegahan dan pengobatan yang tepat untuk kucing Anda, terutama jika kucing memiliki riwayat infestasi kutu yang serius atau jika ada masalah kesehatan lain yang perlu dipertimbangkan.
+                </p>
+            </li>
+        </ul>
+    </div>
+</article>{% endblock %}
